@@ -8,10 +8,10 @@
     <version>2.4.2</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
-  <groupId>com.griesba.gateway</groupId>
-  <artifactId>brewery-gateway</artifactId>
+  <groupId>com.griesba.brewery.gateway</groupId>
+  <artifactId>griesba-brewery-gateway</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>brewery-gateway</name>
+  <name>griesba-brewery-gateway</name>
   <description>brewery gateway</description>
   <properties>
     <java.version>11</java.version>
@@ -22,7 +22,14 @@
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-gateway</artifactId>
     </dependency>
-
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId>
+    </dependency>
   </dependencies>
   <dependencyManagement>
     <dependencies>
