@@ -15,7 +15,7 @@ public class LoadBalancedRoutesConfig {
         return routeLocatorBuilder.routes()
                 .route("beer-service", r -> r.path("/api/v1/beer*", "/api/v1/beer/*", "/api/vi/beerUpc/*")//any path matching "/api/v1/beer/*" and "/api/vi/beerUpc/*"
                         .uri("lb://beer-service"))
-                .route("order-service", r -> r.path("/api/v1/customers/**")
+                .route("beer-order-service", r -> r.path("/api/v1/customers/**")
                         .uri("lb://order-service"))
                 .route("inventory-service", r -> r.path("/api/v1/beer/*/inventory")
                         .filters(f-> f.circuitBreaker(c -> c.setName("inventoryCB")
